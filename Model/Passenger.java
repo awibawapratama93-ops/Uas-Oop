@@ -3,10 +3,10 @@ package model;
 public class Passenger extends Person {
     private int passengerID;
     private String nationality;
-    private String passengerType;
+    private PassengerType passengerType;
 
     // Constructor dari database
-    public Passenger(int passengerID, String name, String email, String phone, String nationality, String passengerType) {
+    public Passenger(int passengerID, String name, String email, String phone, String nationality, PassengerType passengerType) {
         super(name, email, phone);
         this.passengerID = passengerID;
         this.nationality = nationality;
@@ -14,7 +14,7 @@ public class Passenger extends Person {
     }
 
     // Constructor manual (input baru)
-    public Passenger(String name, String email, String phone, String nationality, String passengerType) {
+    public Passenger(String name, String email, String phone, String nationality, PassengerType passengerType) {
         this(0, name, email, phone, nationality, passengerType);
     }
 
@@ -28,6 +28,7 @@ public class Passenger extends Person {
     public void setPassengerID(int passengerID) { this.passengerID = passengerID; }
     public String getNationality() { return nationality; }
     public void setNationality(String nationality) { this.nationality = nationality; }
-    public String getPassengerType() { return passengerType; }
-    public void setPassengerType(String passengerType) { this.passengerType = passengerType; }
+    public PassengerType getPassengerType() { return passengerType; }
+    public void setPassengerType(PassengerType passengerType) { this.passengerType = passengerType; }
+    
 }
